@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId"
+	project-version="1.5.0">
+	<wb-module deploy-name="IDMRestServices">
+		<wb-resource deploy-path="/" source-path="/WebContent"
+			tag="defaultRootSource" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/src" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/services/src" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/serrvices/src-autogen" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/webservices/src-autogen/server" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/webservices/src" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/TAO/Java" />
+		<wb-resource deploy-path="/WEB-INF/classes"
+			source-path="/services/src-autogen" />
+		<property name="java-output-path"
+			value="/IDMRestServices/build/classes" />
+		<property name="context-root" value="IDMRestServices" />
+	</wb-module>
+</project-modules>

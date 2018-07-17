@@ -1,0 +1,31 @@
+package TTQUEUE;
+
+/**
+ *	Generated from IDL interface "Queue"
+ *	@author JacORB IDL compiler V 2.2.2, 1-Jun-2005
+ */
+
+
+public interface QueueOperations
+{
+	/* constants */
+	/* operations  */
+	void registerSession(java.lang.String ticket) throws TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	void unregisterSession(java.lang.String ticket) throws TTEXCEPTIONS.GenericException;
+	TTQUEUE.CQueueInfo getQueueInfo(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId) throws TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	TTQUEUE.CSearchResult searchQueueInfo(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String[] aPropNames, java.lang.String aWhere, java.lang.String aOrderBy, int aOffset, int aMaxRows, org.omg.CORBA.IntHolder aNumMatched) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException,TTQUEUE.BadWhereException,TTQUEUE.BadFieldNamesException;
+	java.lang.String selectQueueInfo(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String[] aPropNames, java.lang.String aWhere, java.lang.String aOrderBy, org.omg.CORBA.IntHolder aNumSelected) throws TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException,TTQUEUE.BadWhereException,TTQUEUE.BadFieldNamesException;
+	TTQUEUE.CQueueInfo[] getSelectedQueueInfo(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String aSelectionId, int aOffset, int aMaxQueues) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException;
+	TTQUEUE.CSearchResult searchEntries(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId, java.lang.String[] aVarNames, java.lang.String aWhere, java.lang.String aOrderBy, int aOffset, int aMaxRows, org.omg.CORBA.IntHolder aNumMatched) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException,TTQUEUE.BadFieldNamesException;
+	TTQUEUE.CSearchResult searchEntryRange(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId, java.lang.String[] aVarNames, java.lang.String aWhere, java.lang.String aOrderBy, org.omg.CORBA.IntHolder aOffset, int aRangeSize, org.omg.CORBA.IntHolder aTotalNumMatched) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException,TTQUEUE.BadFieldNamesException;
+	java.lang.String selectEntries(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId, java.lang.String[] aVarNames, java.lang.String aWhere, java.lang.String aOrderBy, org.omg.CORBA.IntHolder aNumSelected) throws TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException,TTQUEUE.BadFieldNamesException;
+	TTQUEUE.CQueueEntry[] getSelectedEntries(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String aSelectionId, int aOffset, int aMaxEntries) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException;
+	TTQUEUE.CSearchResult getSelectedResults(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String aSelectionId, int aOffset, int aMaxEntries) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadOffsetException,TTEXCEPTIONS.TTlibException;
+	void freeSelectedResults(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, java.lang.String aSelectionId) throws TTQUEUE.QueueException,TTQUEUE.BadSelectionIdException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	int addEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId, TTQUEUE.CNameValue[] aEntryVariables) throws TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadNameValueException,TTEXCEPTIONS.TTlibException;
+	TTQUEUE.CQueueEntry lockEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aQueueId, int aEntryId) throws TTQUEUE.MovedException,TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTQUEUE.LockFailureException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	TTQUEUE.CQueueEntry lockNextEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int[] aQueueIds) throws TTQUEUE.QueueException,TTEXCEPTIONS.AuthenticationException,TTQUEUE.LockFailureException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	void releaseEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aEntryId, TTQUEUE.CNameValue[] aEntryVariables) throws TTQUEUE.QueueException,TTQUEUE.NotLockedException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadNameValueException,TTEXCEPTIONS.TTlibException;
+	void unlockEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aEntryId) throws TTQUEUE.QueueException,TTQUEUE.NotLockedException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTEXCEPTIONS.TTlibException;
+	void updateEntry(java.lang.String aTicket, java.lang.String aQServer, java.lang.String aQServiceName, int aEntryId, TTQUEUE.CNameValue[] aEntryVariables) throws TTQUEUE.QueueException,TTQUEUE.NotLockedException,TTEXCEPTIONS.AuthenticationException,TTEXCEPTIONS.GenericException,TTQUEUE.BadNameValueException,TTEXCEPTIONS.TTlibException;
+}

@@ -1,0 +1,143 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<?TowerVersion value="A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5"?>
+<IDMConfiguration>
+	<DebugFlag>true</DebugFlag>
+	<ConfigurationTable>
+
+		<!-- SSO Configuration -->
+		<NameValue>
+			<Name>SSOPassword</Name>
+			<Value>changeme</Value>
+		</NameValue>
+		<NameValue>
+			<Name>SSOConfigFile</Name>
+			<Value>AS_CONFIG_DOMAIN/idm/config/iwstusso.properties</Value>
+		</NameValue>
+
+		<!-- JNDI and JDBC connection settings  -->
+		<NameValue>
+			<Name>jndi.initial.context.factory</Name>
+			<Value>org.jnp.interfaces.NamingContextFactory</Value>
+		</NameValue>
+		<NameValue>
+			<Name>provider.url</Name>
+			<Value>jnp://localhost:1099</Value>
+		</NameValue>
+		<NameValue>
+			<Name>datasource.ref</Name>
+			<Value>txdataSource-towerPool</Value>
+		</NameValue>
+		<NameValue>
+			<Name>jdbc.table.schema</Name>
+			<Value>TOWER</Value>
+		</NameValue>
+
+		<!-- Interval (in seconds) for user cache cleanup -->
+		<NameValue>
+			<Name>Doctype.UserCleanupInterval</Name>
+			<Value>300</Value>
+		</NameValue>
+
+		<!-- Directory used for caching renderings -->
+		<NameValue>
+			<Name>Renderer.CacheDirectory</Name>
+			<Value>AS_CONFIG_DOMAIN/idm/cache</Value>
+		</NameValue>
+
+		<!-- Interval (in seconds) for cache cleanup -->
+		<NameValue>
+			<Name>IDMCache.CleanupInterval</Name>
+			<Value>600</Value>
+		</NameValue>
+
+		<!-- RenderManager configuration -->
+		<NameValue>
+			<Name>RenderManager.url</Name>
+			<Value>http://RENDERER_HOSTNAME/RenderManager/RenderManager.dll?Handler=Default</Value>
+		</NameValue>
+		<NameValue>
+			<Name>RenderManager.retry</Name>
+			<Value>5</Value>
+		</NameValue>
+		<NameValue>
+			<Name>RenderManager.sleep</Name>
+			<Value>1</Value>
+		</NameValue>
+		<NameValue>
+			<Name>RenderAgent.timeout</Name>
+			<Value>100000</Value>
+		</NameValue>
+
+		<!-- Renderer types for each supported file extension -->
+		<NameValue>
+			<Name>Renderer.AFP</Name>
+			<Value>AFPRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.PCL</Name>
+			<Value>PCLRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.PS</Name>
+			<Value>PSRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.EPS</Name>
+			<Value>PSRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.TIF</Name>
+			<Value>TIFRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.DOC</Name>
+			<Value>OutInRenderer</Value>
+		</NameValue>
+		<NameValue>
+			<Name>Renderer.XLS</Name>
+			<Value>OutInRenderer</Value>
+		</NameValue>
+
+		<!-- Translation from conversion mapping table parameter names -->
+		<!-- to Windows rendering webservice parameter names -->
+		<NameValue>
+			<Name>HEIGHT</Name>
+			<Value>height</Value>
+		</NameValue>
+		<NameValue>
+			<Name>WIDTH</Name>
+			<Value>width</Value>
+		</NameValue>
+		<NameValue>
+			<Name>ZOOMFACTOR</Name>
+			<Value>zoomfactor</Value>
+		</NameValue>
+		<NameValue>
+			<Name>FORCE8BITS</Name>
+			<Value>force8bits</Value>
+		</NameValue>
+		<NameValue>
+			<Name>CONVTYPE</Name>
+			<Value>conversiontype</Value>
+		</NameValue>
+		<NameValue>
+			<Name>COLORON</Name>
+			<Value>fullcolor</Value>
+		</NameValue>
+		<!-- CANNOT BE USED NOT IMPLEMENTED IN VRS!!!NameValue -->
+			<!-- Name>FONTSCALINGFACTOR</Name -->
+			<!-- Value>fontscalingfactor</Value -->
+		<!-- /NameValue -->
+		<NameValue>
+			<Name>HEIGHTWIDTHOVERWRITE</Name>
+			<Value>heightwidthoverwrite</Value>
+		</NameValue>
+
+		<!-- IWSTU Configuration -->
+		<NameValue>
+			<Name>CallStack.Depth</Name>
+			<Value>20</Value>
+		</NameValue>
+
+	</ConfigurationTable>
+</IDMConfiguration>

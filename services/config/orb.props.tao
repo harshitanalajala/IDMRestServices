@@ -1,0 +1,9 @@
+#A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5A5
+# Corba client properties file for Jacorb client
+org.omg.CORBA.ORBClass org.jacorb.orb.ORB
+org.omg.CORBA.ORBSingletonClass org.jacorb.orb.ORBSingleton
+jacorb.implname StandardNS
+# In the following replace IDMHOSTNAME with your servers name and
+# replace NAME_SERVICE_PORT with the port number used for the TAO name service
+# typically set in the servers tower admin users environment
+ORBInitRef.NameService corbaloc:iiop:IDMHOSTNAME:NAME_SERVICE_PORT/NameService
